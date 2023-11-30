@@ -14,6 +14,7 @@
     };
     casks = [
       "gpg-suite-no-mail"
+      "balenaetcher"
     ];
     taps = [];
     brews = [
