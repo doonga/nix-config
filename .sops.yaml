@@ -2,7 +2,7 @@
 keys:
   - &host_gladius age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
   - &host_nixvm age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
-  - &user_bjw-s age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
+  - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
 
 creation_rules:
   - path_regex: .*\.sops\.ya?ml$
