@@ -56,7 +56,7 @@
       };
 
       flake.nixosConfigurations = {
-        nas = myLib.mkNixosSystem     "x86_64-linux"  "gladius";
+        nas = myLib.mkNixosSystem     "x86_64-linux"  "nas";
         test-vm = myLib.mkNixosSystem "aarch64-linux" "test-vm";
       };
 
