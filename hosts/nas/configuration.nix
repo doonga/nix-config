@@ -6,7 +6,7 @@
       device = {
         cpu = "intel";
         gpu = "intel";
-        hostId = "775b7d55";
+        hostId = "550618b6";
       };
 
       users.todd.enable = true;
@@ -21,9 +21,9 @@
       };
 
       filesystem.zfs.enable = true;
-      filesystem.zfs.mountPoolsAtBoot = [
-        "tank"
-      ];
+      # filesystem.zfs.mountPoolsAtBoot = [
+      #   "tank"
+      # ];
 
       monitoring.smartd.enable = true;
 
