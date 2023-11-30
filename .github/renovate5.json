@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "github>doonga/renovate-config",
+    "github>doonga/renovate-config:automerge-github-actions"
+  ],
+  "platform": "github",
+  "username": "greyrock-bot[bot]",
+  "gitAuthor": "greyrock-bot <112729691+greyrock-bot[bot]@users.noreply.github.com>"
+}
