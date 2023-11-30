@@ -4,8 +4,9 @@ let
   cfg = config.modules.users.${username}.shell.fish;
 
   defaultConfig = import ./defaultConfig.nix;
+  darwinConfig = import ./darwinConfig.nix;
 in {
-   options.modules.users.${username}.shell.fish = {
+  options.modules.users.${username}.shell.fish = {
     enable = mkEnableOption "${username} fish";
 
     config = mkOption {
@@ -20,6 +21,7 @@ in {
 
       home-manager.users.${username} = mkIf (cfg.enable) (mkMerge [
         defaultConfig
+        (mkIf (pkgs.stdenv.isDarwin) (darwinConfig))
         cfg.config
       ]);
   }

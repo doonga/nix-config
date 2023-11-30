@@ -34,6 +34,7 @@
     functions = {
       # Disable greeting
       fish_greeting = "";
+      nixup = "nix flake update ~/src/nix-config";
     };
   };
 }
