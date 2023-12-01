@@ -21,9 +21,9 @@
       };
 
       filesystem.zfs.enable = true;
-      # filesystem.zfs.mountPoolsAtBoot = [
-      #   "tank"
-      # ];
+      filesystem.zfs.mountPoolsAtBoot = [
+        "tank"
+      ];
 
       monitoring.smartd.enable = true;
 
