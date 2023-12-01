@@ -19,9 +19,6 @@ in {
     enableDesktopTools = mkEnableOption "Enable Desktop tools" // {
       default = false;
     };
-    enableHomebrew = mkEnableOption "Enable Homebrew" // {
-      default = false;
-    };
   };
 
   config = mkIf (cfg.enable) (mkMerge [
@@ -105,6 +102,5 @@ in {
     (mkIf (cfg.enableKubernetesTools) (import ./_kubernetes.nix args))
     (mkIf (cfg.enableDevTools) (import ./_devtools.nix args))
     (mkIf (cfg.enableDesktopTools) (import ./_desktoptools.nix args))
-    (mkIf (cfg.enableHomebrew) (import ./_homebrew.nix args))
   ]);
 }

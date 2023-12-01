@@ -8,7 +8,6 @@
         enableDevTools = true;
         enableKubernetesTools = true;
         enableDesktopTools = true;
-        enableHomebrew = true;
       };
     };
 
