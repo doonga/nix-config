@@ -2,10 +2,10 @@
 with lib;
 
 let
-  cfg = config.modules.users.${username}.mac.kitty;
+  cfg = config.modules.users.${username}.terminal.kitty;
 
 in {
-  options.modules.users.${username}.mac.kitty = {
+  options.modules.users.${username}.terminal.kitty = {
     enable = mkEnableOption "${username} kitty";
   };
 

@@ -19,14 +19,16 @@ in {
     enableDesktopTools = mkEnableOption "Enable Desktop tools" // {
       default = false;
     };
+    enableHomebrew = mkEnableOption "Enable Homebrew" // {
+      default = false;
+    };
   };
 
   config = mkIf (cfg.enable) (mkMerge [
     (mkIf (pkgs.stdenv.isLinux) (import ./nixos.nix args))
-    (mkIf (pkgs.stdenv.isDarwin) (import ./darwin.nix args))
-    (mkIf (pkgs.stdenv.isDarwin) (import ./homebrew.nix args))
+    # (mkIf (pkgs.stdenv.isDarwin) (import ./darwin.nix args))
 
-    (mkIf (pkgs.stdenv.isDarwin) {modules.users.todd.mac.kitty.enable = true;})
+    (mkIf (pkgs.stdenv.isDarwin) {modules.users.todd.terminal.kitty.enable = true;})
 
     {
       users.users.todd = {
@@ -103,5 +105,6 @@ in {
     (mkIf (cfg.enableKubernetesTools) (import ./_kubernetes.nix args))
     (mkIf (cfg.enableDevTools) (import ./_devtools.nix args))
     (mkIf (cfg.enableDesktopTools) (import ./_desktoptools.nix args))
+    (mkIf (cfg.enableHomebrew) (import ./_homebrew.nix args))
   ]);
 }
