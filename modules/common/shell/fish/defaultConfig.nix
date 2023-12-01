@@ -29,6 +29,7 @@
       # other
       df = "df -h";
       du = "du -h";
+      ssh = "ssh -A";
     };
 
     functions = {
