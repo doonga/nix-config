@@ -21,8 +21,6 @@ in
     ( import ../kubernetes/talhelper {username=username;} )
     ( import ../kubernetes/talosctl {username=username;} )
 
-    ( import ../security/_1password {username=username;} )
-
     ( import ../shell/atuin {username=username;} )
     ( import ../shell/fish {username=username;} )
     ( import ../shell/git {username=username;} )

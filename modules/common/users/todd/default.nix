@@ -26,7 +26,6 @@ in {
     (mkIf (pkgs.stdenv.isDarwin) (import ./darwin.nix args))
 
     (mkIf (pkgs.stdenv.isDarwin) {modules.users.todd.terminal.kitty.enable = true;})
-    (mkIf (pkgs.stdenv.isDarwin) {modules.users.todd.security._1password.enable = true;})
 
     {
       users.users.todd = {
