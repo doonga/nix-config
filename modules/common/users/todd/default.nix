@@ -95,7 +95,7 @@ in {
         ];
       };
 
-      modules.users.todd.shell.nvim.enable = true;
+      modules.users.todd.editor.nvim.enable = true;
       modules.users.todd.shell.starship.enable = true;
     }
 
