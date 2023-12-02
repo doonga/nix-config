@@ -76,7 +76,10 @@ in {
             defaultBranch = "main";
           };
           pull = {
-            rebase = false;
+            rebase = true;
+           };
+           rebase = {
+             autoStash = true;
           };
         };
         ignores = [
