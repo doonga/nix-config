@@ -59,7 +59,7 @@ in {
       modules.users.todd.shell.git = {
         enable = true;
         username = "Todd Punderson";
-        email = "fairs_rubs_0j@icloud.com";
+        email = "agile.car7544@undercovermail.org";
         signing = {
           signByDefault = true;
           key = "B6F2966E0B5ECD11";
