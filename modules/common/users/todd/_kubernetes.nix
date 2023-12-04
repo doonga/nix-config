@@ -12,7 +12,7 @@ in
   modules.users.todd.kubernetes.kubectl.enable = true;
   modules.users.todd.kubernetes.kustomize.enable = true;
   modules.users.todd.kubernetes.stern.enable = true;
-  modules.users.todd.kubernetes.talhelper.enable = true;
+  modules.users.todd.kubernetes.talhelper.enable = false;
   modules.users.todd.kubernetes.talosctl.enable = true;
 
   modules.users.todd.shell.fish = {
