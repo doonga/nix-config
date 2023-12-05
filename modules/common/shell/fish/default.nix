@@ -3,7 +3,7 @@ with lib;
 let
   cfg = config.modules.users.${username}.shell.fish;
 
-  defaultConfig = import ./defaultConfig.nix;
+  defaultConfig = (import ./defaultConfig.nix args);
   darwinConfig = import ./darwinConfig.nix;
 in {
   options.modules.users.${username}.shell.fish = {
