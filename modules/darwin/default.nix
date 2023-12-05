@@ -44,6 +44,7 @@
       "gpg-suite-no-mail"
       "balenaetcher"
       "1password"
+      "beyond-compare"
     ];
     taps = [];
     brews = [
