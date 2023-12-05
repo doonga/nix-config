@@ -29,6 +29,9 @@ in
     ( import ../shell/starship {username=username;} )
 
     ( import ../terminal/kitty {username=username;} )
+
+    ( import ../virtualisation/colima {username=username;} )
+    ( import ../virtualisation/docker-cli {username=username;} )
   ];
 
   options.modules.users.${username}.home-manager = {

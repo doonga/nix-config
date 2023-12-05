@@ -54,6 +54,11 @@ in
     package = pkgs-unstable.rtx;
   };
 
+  modules.users.todd.virtualisation.colima = {
+    enable = true;
+    package = pkgs-unstable.colima;
+  };
+
   home-manager.users.todd.home.packages = [
     pkgs.ansible
     pkgs.envsubst
