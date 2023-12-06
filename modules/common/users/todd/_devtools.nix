@@ -63,8 +63,8 @@ in
     pkgs.ansible
     pkgs.envsubst
     pkgs.go-task
+    pkgs.kopia
     pkgs.minio-client
     pkgs.terraform
-    pkgs.vault
   ];
 }
