@@ -66,5 +66,6 @@ in
     pkgs.kopia
     pkgs.minio-client
     pkgs.terraform
+
   ];
 }
