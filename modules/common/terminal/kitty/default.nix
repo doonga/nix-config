@@ -17,6 +17,9 @@ in {
           name = "FiraCode Nerd Font";
           size = 16;
         };
+        settings = {
+          confirm_os_window_close = 0;
+        };
         shellIntegration.enableFishIntegration = true;
         theme = "Catppuccin-Macchiato";
       };
