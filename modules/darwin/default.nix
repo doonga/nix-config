@@ -50,7 +50,6 @@
     brews = [
       "mas"
       "watch"
-      "talhelper"
     ];
   };
 
