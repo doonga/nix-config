@@ -39,6 +39,7 @@
     masApps = {
       "1Blocker - Ad Blocker" = 1365531024;
       "1Password for Safari" = 1569813296;
+      "CARROT Weather" = 993487541;
     };
     casks = [
       "gpg-suite-no-mail"
