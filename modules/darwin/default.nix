@@ -46,6 +46,8 @@
       "balenaetcher"
       "1password"
       "beyond-compare"
+      "mqtt-explorer"
+      "eloston-chromium"
     ];
     taps = [];
     brews = [
