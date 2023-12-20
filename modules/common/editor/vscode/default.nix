@@ -21,6 +21,7 @@ let
     redhat.vscode-yaml
     signageos.signageos-vscode-sops
     tamasfe.even-better-toml
+    vivaxy.vscode-conventional-commits
   ];
   defaultConfig = (import ./defaultConfig.nix args);
 
