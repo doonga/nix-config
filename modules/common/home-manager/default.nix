@@ -28,8 +28,6 @@ in
     ( import ../shell/rtx {username=username;} )
     ( import ../shell/starship {username=username;} )
 
-    ( import ../terminal/kitty {username=username;} )
-
     ( import ../virtualisation/colima {username=username;} )
     ( import ../virtualisation/docker-cli {username=username;} )
   ];
