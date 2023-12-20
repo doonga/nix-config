@@ -56,7 +56,6 @@ in {
               config.allowUnfree = true;
               overlays = [ (import ../packages/overlay.nix {inherit inputs system;}) ];
             };
-          talhelper = inputs.talhelper.packages.${system}.default;
           };
         }
         inputs.home-manager.darwinModules.home-manager

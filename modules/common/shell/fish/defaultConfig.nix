@@ -29,15 +29,13 @@
       # other
       df = "df -h";
       du = "du -h";
-      ssh = "ssh -A";
     };
 
     functions = {
       fish_greeting = {
-         description = "Set the fish greeting";
-         body = builtins.readFile ./functions/fish_greeting.fish;
-       };
-      nixup = "nix flake update ~/src/nix-config";
+        description = "Set the fish greeting";
+        body = builtins.readFile ./functions/fish_greeting.fish;
+      };
     };
   };
 }

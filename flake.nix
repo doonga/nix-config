@@ -28,12 +28,6 @@
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
     };
-
-    # talhelper
-    talhelper = {
-      url = "github:budimanjojo/talhelper";
-    };
-
   };
 
   outputs = { flake-parts, ... }@inputs:
@@ -51,7 +45,7 @@
         pkgs,
         ...
       }: {
-        # legacyPackages = import ./packages { inherit inputs' pkgs; };
+        # legacyPackages = import ./nixos/packages { inherit inputs' pkgs; };
         # devShells.default = import ./nixos/packages/shell.nix { inherit inputs' pkgs; };
       };
 

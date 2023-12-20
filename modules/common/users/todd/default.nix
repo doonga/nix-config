@@ -1,4 +1,4 @@
-args@{ pkgs, pkgs-unstable, vscode-extensions, talhelper, lib, config, ... }:
+args@{ pkgs, pkgs-unstable, vscode-extensions, lib, config, ... }:
 with lib;
 
 let
@@ -14,9 +14,6 @@ in {
       default = false;
     };
     enableKubernetesTools = mkEnableOption "Enable k8s tools" // {
-      default = false;
-    };
-    enableDesktopTools = mkEnableOption "Enable Desktop tools" // {
       default = false;
     };
   };
@@ -75,9 +72,9 @@ in {
           };
           pull = {
             rebase = true;
-           };
-           rebase = {
-             autoStash = true;
+          };
+          rebase = {
+            autoStash = true;
           };
         };
         ignores = [
@@ -98,10 +95,10 @@ in {
 
       modules.users.todd.editor.nvim.enable = true;
       modules.users.todd.shell.starship.enable = true;
+      modules.users.todd.shell.tmux.enable = true;
     }
 
     (mkIf (cfg.enableKubernetesTools) (import ./_kubernetes.nix args))
     (mkIf (cfg.enableDevTools) (import ./_devtools.nix args))
-    (mkIf (cfg.enableDesktopTools) (import ./_desktoptools.nix args))
   ]);
 }

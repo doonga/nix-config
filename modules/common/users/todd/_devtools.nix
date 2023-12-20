@@ -58,16 +58,12 @@ in
 
   modules.users.todd.virtualisation.colima = {
     enable = true;
+    enableService = true;
     package = pkgs-unstable.colima;
   };
 
   home-manager.users.todd.home.packages = [
-    pkgs.ansible
     pkgs.envsubst
     pkgs.go-task
-    pkgs.kopia
-    pkgs.minio-client
-    pkgs.terraform
-
   ];
 }
