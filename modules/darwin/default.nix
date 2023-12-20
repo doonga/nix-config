@@ -42,12 +42,19 @@
       "CARROT Weather" = 993487541;
     };
     casks = [
-      "gpg-suite-no-mail"
-      "balenaetcher"
       "1password"
+      "1password-cli"
+      "balenaetcher"
+      "bartender"
       "beyond-compare"
-      "mqtt-explorer"
       "eloston-chromium"
+      "gpg-suite-no-mail"
+      "iterm2"
+      "mqtt-explorer"
+      "orbstack"
+      "rocket"
+      "shottr"
+      "yubico-yubikey-manager"
     ];
     taps = [];
     brews = [
