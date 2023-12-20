@@ -6,19 +6,18 @@ let
   vscode-utils = pkgs.vscode-utils;
 in
 {
-
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2023.22.1";
-    sha256 = "1cg41vli6g330fjpjyxf65ipzh1xjx3s4pdcqzkzqgl57y505ndy";
+    version = "2023.23.13541005";
+    sha256 = "1rir25hf09ig70py57j6aaqd12a3g16kxx8271m2q92s26ldgvpv";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.1";
-    sha256 = "03fr9zanhdsf3wirv65vb41swvdnxxaz8lviyjdbmzcw9yihf8dv";
+    version = "2023.12.100";
+    sha256 = "1h0y86j7c0wkzmkcv2d7ba9mcsn1z3lvcykq31wzvb0bi75ssbd9";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -38,22 +37,22 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "14.6.1";
-    sha256 = "0nc6xv9rwfw92fnl089cvlrn3cqw21jkns8shkj1d0h1qiq4rh5q";
+    version = "2023.12.2004";
+    sha256 = "1cyqsvrsk80cvg9p025yv3cqx99chigi8myha4iy3cjjjl83znpa";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
     name = "remote-containers";
     publisher = "ms-vscode-remote";
-    version = "0.327.0";
-    sha256 = "0asswm55bx5gpz08cgpmgfvnb0494irj0gsvzx5nwknqfzpj07lz";
+    version = "0.329.0";
+    sha256 = "1y2r34dc48aj55b5nhdj58qkbvgipcdaiv00vp2q154rmlwx7lz9";
   };
 
   "ms-vscode-remote"."remote-ssh" = vscode-utils.extensionFromVscodeMarketplace {
     name = "remote-ssh";
     publisher = "ms-vscode-remote";
-    version = "0.107.1";
-    sha256 = "1q9xp8id9afhjx67zc7a61zb572f296apvdz305xd5v4brqd9xrf";
+    version = "0.108.2023112915";
+    sha256 = "1ys59dys5kmijr9f2afbzbwm7dx7ps78jdwp89q1kb4c0aajmkx2";
   };
 
   "redhat"."vscode-yaml" = vscode-utils.extensionFromVscodeMarketplace {
@@ -66,8 +65,8 @@ in
   "github"."copilot" = vscode-utils.extensionFromVscodeMarketplace {
     name = "copilot";
     publisher = "github";
-    version = "1.143.0";
-    sha256 = "08rna6k82hcbpdaglfl47kix54i5b6a4vs5wa64gkr55896vh74i";
+    version = "1.143.601";
+    sha256 = "0c5zpns1agbvsb32w4d0fj2dmqyak6d1sjwip128x10zy3aymvqr";
   };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
@@ -117,6 +116,13 @@ in
     publisher = "redhat";
     version = "2.9.118";
     sha256 = "0yndj2r0w2zxc5firxgfrykkc5ajy9gsmrfmkz80kfhwk33n9y1p";
+  };
+
+  "vivaxy"."vscode-conventional-commits" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-conventional-commits";
+    publisher = "vivaxy";
+    version = "1.25.0";
+    sha256 = "00mv34898y4xgqv6xf57bdl32qbbma4imz08jc4v5skmwjrgbwr8";
   };
 
   "fnando"."linter" = vscode-utils.extensionFromVscodeMarketplace {
