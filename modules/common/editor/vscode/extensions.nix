@@ -16,8 +16,8 @@ in
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.100";
-    sha256 = "1h0y86j7c0wkzmkcv2d7ba9mcsn1z3lvcykq31wzvb0bi75ssbd9";
+    version = "2023.12.101";
+    sha256 = "0i8gjrr5l5q9x9pd55gj4vd20fgajljiaib3qs05p9hxnqfj11xj";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -37,8 +37,8 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2023.12.2004";
-    sha256 = "1cyqsvrsk80cvg9p025yv3cqx99chigi8myha4iy3cjjjl83znpa";
+    version = "2023.12.2104";
+    sha256 = "0kwfnshyj118wyl9p0rqn0imckkm23w5wrfjmqknby1qgisx2akp";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
@@ -93,8 +93,8 @@ in
   "hashicorp"."terraform" = vscode-utils.extensionFromVscodeMarketplace {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.29.1";
-    sha256 = "sha256-0XC0j0DQbRnu5k8HBgJSoYb7noj2jxFtgPvGazx0uyI=";
+    version = "2.29.2023121311";
+    sha256 = "173i855y2y71fbs8fwmdsvddpvvdbmixh0z6f2nzvx1lk4h96llv";
   };
 
   "ionutvmi"."path-autocomplete" = vscode-utils.extensionFromVscodeMarketplace {
