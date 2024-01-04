@@ -6,10 +6,20 @@
     };
     defaultFormatter = "esbenp.prettier-vscode";
     fontFamily = (lib.strings.concatStringsSep "," [
-      "'FiraCode Nerd Font'"
-      "'Font Awesome 6 Free Solid'"
+      "'Monaspace Krypton'"
     ]);
-    fontLigatures = true;
+    fontLigatures = (lib.strings.concatStringsSep "," [
+      "'ss01'"
+      "'ss02'"
+      "'ss03'"
+      "'ss04'"
+      "'ss05'"
+      "'ss06'"
+      "'ss07'"
+      "'ss08'"
+      "'calt'"
+      "'dlig'"
+    ]);
     formatOnSave = true;
     guides = {
       bracketPairs = true;

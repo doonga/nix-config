@@ -37,8 +37,8 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2023.12.2104";
-    sha256 = "0kwfnshyj118wyl9p0rqn0imckkm23w5wrfjmqknby1qgisx2akp";
+    version = "2024.1.404";
+    sha256 = "1zx0ryzq695k7izwq30x12w663r6nxw85lm4pkh3mg5957n53x1l";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
@@ -65,8 +65,8 @@ in
   "github"."copilot" = vscode-utils.extensionFromVscodeMarketplace {
     name = "copilot";
     publisher = "github";
-    version = "1.143.601";
-    sha256 = "0c5zpns1agbvsb32w4d0fj2dmqyak6d1sjwip128x10zy3aymvqr";
+    version = "1.144.631";
+    sha256 = "1r7nm77wjfy4wdb4a12wi8mvlkpbw6z1yncccwalf5riq6f6x0x5";
   };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
@@ -135,8 +135,8 @@ in
   "catppuccin"."catppuccin-vsc" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc";
     publisher = "catppuccin";
-    version = "3.8.2";
-    sha256 = "034rwrd56xcgnzfqvpbdhhhil7ihxdqqhfh2wikk6c1xvw52wiwl";
+    version = "3.9.0";
+    sha256 = "05mdizc2hcijby1n73b46akdqgnn6wvmhh74dg08klvfar8ibifa";
   };
 
   "mrmlnc"."vscode-json5" = vscode-utils.extensionFromVscodeMarketplace {
@@ -149,8 +149,8 @@ in
   "catppuccin"."catppuccin-vsc-icons" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc-icons";
     publisher = "catppuccin";
-    version = "0.30.0";
-    sha256 = "035rl1kx565h9s0xlh20pr6p26g9g9zy2l4zag0bn653lbm51jhg";
+    version = "0.33.0";
+    sha256 = "0kyx63q83w9yb10mnapd83q863dkzx8n8hdljrrl15ml5hhimk2i";
   };
 
   "jnoortheen"."nix-ide" = vscode-utils.extensionFromVscodeMarketplace {
@@ -170,8 +170,8 @@ in
   "elagil"."pre-commit-helper" = vscode-utils.extensionFromVscodeMarketplace {
     name = "pre-commit-helper";
     publisher = "elagil";
-    version = "0.4.3";
-    sha256 = "1877k35biy72sh0c5f890z0mh36sr2cvd3d1mmw9mb2mdfq6xyqk";
+    version = "0.5.0";
+    sha256 = "05cs1ndnha9dgv1ys23z81ajk300wpixqmks0lfmrj1zwyjg2wlj";
   };
 
   "shipitsmarter"."sops-edit" = vscode-utils.extensionFromVscodeMarketplace {
