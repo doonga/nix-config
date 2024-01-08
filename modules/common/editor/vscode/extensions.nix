@@ -16,8 +16,8 @@ in
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.101";
-    sha256 = "0i8gjrr5l5q9x9pd55gj4vd20fgajljiaib3qs05p9hxnqfj11xj";
+    version = "2023.12.102";
+    sha256 = "0n7ki321qy9vqhdafyqn4pakqdyl0kxclrh21rnmyl4x47q8kj83";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -37,8 +37,8 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.1.404";
-    sha256 = "1zx0ryzq695k7izwq30x12w663r6nxw85lm4pkh3mg5957n53x1l";
+    version = "2024.1.604";
+    sha256 = "08pcfh6lslr18pnjghfnqh01hy2b9i93hgdjhxqiwiwllpd9ns5r";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
@@ -65,8 +65,8 @@ in
   "github"."copilot" = vscode-utils.extensionFromVscodeMarketplace {
     name = "copilot";
     publisher = "github";
-    version = "1.144.631";
-    sha256 = "1r7nm77wjfy4wdb4a12wi8mvlkpbw6z1yncccwalf5riq6f6x0x5";
+    version = "1.145.636";
+    sha256 = "1fpy19j12p83gwgk970db8k09hgm4iy085vsjzvl538gzvgsb91a";
   };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
@@ -135,8 +135,8 @@ in
   "catppuccin"."catppuccin-vsc" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc";
     publisher = "catppuccin";
-    version = "3.9.0";
-    sha256 = "05mdizc2hcijby1n73b46akdqgnn6wvmhh74dg08klvfar8ibifa";
+    version = "3.10.1";
+    sha256 = "1i0gz1hc5l0q1i8c2j6zdr1s2iwjg83bhrfg5lphxbs3ls16xgbs";
   };
 
   "mrmlnc"."vscode-json5" = vscode-utils.extensionFromVscodeMarketplace {

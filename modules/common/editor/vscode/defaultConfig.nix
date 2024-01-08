@@ -5,21 +5,11 @@
       enabled = true;
     };
     defaultFormatter = "esbenp.prettier-vscode";
-    fontFamily = (lib.strings.concatStringsSep "," [
-      "'Monaspace Krypton'"
+    fontFamily = lib.mkDefault(lib.strings.concatStringsSep "," [
+      "'FiraCode Nerd Font'"
+      "'Font Awesome 6 Free Solid'"
     ]);
-    fontLigatures = (lib.strings.concatStringsSep "," [
-      "'ss01'"
-      "'ss02'"
-      "'ss03'"
-      "'ss04'"
-      "'ss05'"
-      "'ss06'"
-      "'ss07'"
-      "'ss08'"
-      "'calt'"
-      "'dlig'"
-    ]);
+    fontLigatures = lib.mkDefault true;
     formatOnSave = true;
     guides = {
       bracketPairs = true;

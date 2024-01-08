@@ -94,6 +94,8 @@ in {
         ];
       };
 
+      modules.users.bjw-s.fonts.monaspace.enable = true;
+
       modules.users.todd.editor.nvim.enable = true;
       modules.users.todd.shell.starship.enable = true;
       modules.users.todd.shell.tmux.enable = true;
