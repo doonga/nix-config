@@ -74,5 +74,7 @@ in
   home-manager.users.todd.home.packages = [
     pkgs.envsubst
     pkgs.go-task
+  ] ++ [
+    myPkgs.harlequin
   ];
 }
