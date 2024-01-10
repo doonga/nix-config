@@ -60,9 +60,12 @@ in
     };
   };
 
-  modules.users.todd.shell.rtx = {
+  modules.users.todd.shell.mise = {
     enable = true;
-    package = pkgs-unstable.rtx;
+    package = myPkgs.mise;
+    config = {
+      experimental = true;
+    };
   };
 
   modules.users.todd.virtualisation.colima = {
