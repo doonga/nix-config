@@ -1,11 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 let
   vscode-extensions = (import ../../editor/vscode/extensions.nix){pkgs = pkgs;};
 in
 {
   modules.users.todd.kubernetes.k9s.enable = true;
   modules.users.todd.kubernetes.krew.enable = true;
-  modules.users.todd.kubernetes.kubecm.enable = true;
+  modules.users.bjw-s.kubernetes.kubecm = {
+    enable = true;
+    package = pkgs-unstable.kubecm;
+  };
   modules.users.todd.kubernetes.stern.enable = true;
 
   modules.users.todd.shell.fish = {
