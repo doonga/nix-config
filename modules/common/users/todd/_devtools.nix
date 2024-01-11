@@ -34,6 +34,7 @@ in
         ];
         fontLigatures = "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss06'";
       };
+
       # Extension settings
       ansible = {
         python.interpreterPath = ".venv/bin/python";
@@ -65,6 +66,7 @@ in
     package = myPkgs.mise;
     config = {
       experimental = true;
+      python_venv_auto_create = true;
     };
   };
 
