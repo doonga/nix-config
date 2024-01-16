@@ -5,7 +5,7 @@ in
 {
   modules.users.todd.kubernetes.k9s.enable = true;
   modules.users.todd.kubernetes.krew.enable = true;
-  modules.users.bjw-s.kubernetes.kubecm = {
+  modules.users.todd.kubernetes.kubecm = {
     enable = true;
     package = pkgs-unstable.kubecm;
   };
