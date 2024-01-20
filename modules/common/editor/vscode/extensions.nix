@@ -9,15 +9,15 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2023.23.13541005";
-    sha256 = "1rir25hf09ig70py57j6aaqd12a3g16kxx8271m2q92s26ldgvpv";
+    version = "2023.25.10191009";
+    sha256 = "068wvvzwrxw64v2zgxwq6cfc4li2nfgm2bb9zlnmalyf06xh6lk3";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.102";
-    sha256 = "0n7ki321qy9vqhdafyqn4pakqdyl0kxclrh21rnmyl4x47q8kj83";
+    version = "2023.12.103";
+    sha256 = "1lkh94vyx9k23yw7i6sl1yy5f5wf3kjm8c5ljybzvy1lbi831lyf";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -37,15 +37,15 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.1.604";
-    sha256 = "08pcfh6lslr18pnjghfnqh01hy2b9i93hgdjhxqiwiwllpd9ns5r";
+    version = "2024.1.1904";
+    sha256 = "1vy5q7akrnxs3q4vhq1njbsbi8kysszl5yhpkns1q3z0kin6bw93";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
     name = "remote-containers";
     publisher = "ms-vscode-remote";
-    version = "0.329.0";
-    sha256 = "1y2r34dc48aj55b5nhdj58qkbvgipcdaiv00vp2q154rmlwx7lz9";
+    version = "0.330.0";
+    sha256 = "19a24fszhhc6d40r5r2kh5kvmpg0614p0666cdzci4nn5qr4bh3g";
   };
 
   "ms-vscode-remote"."remote-ssh" = vscode-utils.extensionFromVscodeMarketplace {
@@ -65,8 +65,8 @@ in
   "github"."copilot" = vscode-utils.extensionFromVscodeMarketplace {
     name = "copilot";
     publisher = "github";
-    version = "1.145.636";
-    sha256 = "1fpy19j12p83gwgk970db8k09hgm4iy085vsjzvl538gzvgsb91a";
+    version = "1.152.662";
+    sha256 = "0gvc2prh10bgjpb0flnvaclj7n4s11myinvxid3phrh5x4jqxhwh";
   };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
@@ -93,8 +93,8 @@ in
   "hashicorp"."terraform" = vscode-utils.extensionFromVscodeMarketplace {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.29.2023121311";
-    sha256 = "173i855y2y71fbs8fwmdsvddpvvdbmixh0z6f2nzvx1lk4h96llv";
+    version = "2.29.2024011611";
+    sha256 = "0nmr0iyc9iifzf5wvqq501kwrsf9016iig613djjsykp3p2lja79";
   };
 
   "ionutvmi"."path-autocomplete" = vscode-utils.extensionFromVscodeMarketplace {
@@ -135,8 +135,8 @@ in
   "catppuccin"."catppuccin-vsc" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc";
     publisher = "catppuccin";
-    version = "3.10.1";
-    sha256 = "1i0gz1hc5l0q1i8c2j6zdr1s2iwjg83bhrfg5lphxbs3ls16xgbs";
+    version = "3.11.0";
+    sha256 = "12bzx1pv9pxbm08dhvl8pskpz1vg2whxmasl0qk2x54swa2rhi4d";
   };
 
   "mrmlnc"."vscode-json5" = vscode-utils.extensionFromVscodeMarketplace {
