@@ -40,10 +40,10 @@ in {
     (mkIf (pkgs.stdenv.isDarwin) (
       {
         home-manager.users.${username} = {
-          home.file."Library/Application Support/k9s/config.yaml" = {
+          home.file."Library/Application Support/k9s/config.yml" = {
             source = mergedConfig;
           };
-          home.file."Library/Application Support/k9s/aliases.yaml" = {
+          home.file."Library/Application Support/k9s/aliases.yml" = {
             source = mergedAliases;
           };
         };
