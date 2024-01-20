@@ -3,7 +3,10 @@ let
   vscode-extensions = (import ../../editor/vscode/extensions.nix){pkgs = pkgs;};
 in
 {
-  modules.users.todd.kubernetes.k9s.enable = true;
+  modules.users.bjw-s.kubernetes.k9s = {
+    enable = true;
+    package = pkgs-unstable.k9s;
+  };
   modules.users.todd.kubernetes.krew.enable = true;
   modules.users.todd.kubernetes.kubecm = {
     enable = true;
