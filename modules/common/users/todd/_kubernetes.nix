@@ -6,6 +6,13 @@ in
   modules.users.bjw-s.kubernetes.k9s = {
     enable = true;
     package = pkgs-unstable.k9s;
+    config = {
+      k9s = {
+        ui = {
+          skin = "catppuccin-macchiato";
+        };
+      };
+    };
   };
   modules.users.todd.kubernetes.krew.enable = true;
   modules.users.todd.kubernetes.kubecm = {
