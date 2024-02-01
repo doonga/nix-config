@@ -21,7 +21,6 @@ let
     redhat.vscode-yaml
     shipitsmarter.sops-edit
     tamasfe.even-better-toml
-    vivaxy.vscode-conventional-commits
   ];
   defaultConfig = (import ./defaultConfig.nix args);
 
