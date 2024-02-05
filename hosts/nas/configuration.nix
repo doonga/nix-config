@@ -13,6 +13,8 @@ in
       };
 
       users.todd.enable = true;
+      users.andy.enable = true;
+
       users.groups = {
         external-services = {
           gid = 65542;
