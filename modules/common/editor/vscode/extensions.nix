@@ -94,7 +94,7 @@ in
     name = "terraform";
     publisher = "hashicorp";
     version = "2.29.2024012316";
-    sha256 = "1i29i5s0kjcanlzsh4xxrlrimi2dsxrmh84aazs429vmivs3xi43";
+    sha256 = "9dR8leUJCbAPSMWjgSDYuh9PrDCXEmy+qrOiYnQj/qo=";
   };
 
   "ionutvmi"."path-autocomplete" = vscode-utils.extensionFromVscodeMarketplace {
