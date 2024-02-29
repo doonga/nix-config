@@ -9,15 +9,15 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2024.0.0";
-    sha256 = "0sy1z2r6b0m1lkivjyrcf41dbgj9m5zkjy6yncpji1hisjcbgq6n";
+    version = "2024.3.10601007";
+    sha256 = "09wvmgmqjn6620fknzdax9a6z2zcmyz20qjq24pya21cr2bb66gc";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.1.104";
-    sha256 = "00h7iri4xn01k6pmxlmzvhsasljl5jnpc7y4q8njc5v37illgzyv";
+    version = "2024.2.104";
+    sha256 = "04fi5wqz34b8y94wb21dsfdcn5blxgwcdr4s5qa4apzm6yqgi6f9";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -30,15 +30,15 @@ in
   "ms-azuretools"."vscode-docker" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-docker";
     publisher = "ms-azuretools";
-    version = "1.28.0";
-    sha256 = "0nmc3pdgxpmr6k2ksdczkv9bbwszncfczik0xjympqnd2k0ra9h0";
+    version = "1.29.0";
+    sha256 = "0rz32qwdf7a5hn3nnhxviaf8spwsszfrxmhnbbskspi5r9b6qm4r";
   };
 
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.2.104";
-    sha256 = "1prgmbf46x48mrvp5xk6diyn0mlksvscirb2c6faihr2ynfiipv8";
+    version = "2024.2.2904";
+    sha256 = "185q2wzwk9a65nxmyajscp888x925drpkdzral0x03yydwq172w1";
   };
 
   "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
@@ -65,15 +65,15 @@ in
   "github"."copilot" = vscode-utils.extensionFromVscodeMarketplace {
     name = "copilot";
     publisher = "github";
-    version = "1.156.686";
-    sha256 = "03z0l5g5dpixinyj5cqfdfr15yy313mgsgl0k7iagy5wrp17qqya";
+    version = "1.168.742";
+    sha256 = "1kp8myk7n42pfya5zgw7g0mw5ygdwrff5ank8ddsrby40vc455nd";
   };
 
   "golang"."go" = vscode-utils.extensionFromVscodeMarketplace {
     name = "go";
     publisher = "golang";
-    version = "0.40.3";
-    sha256 = "15kicpv9xpn7l3w9mbmsjdzjmavh88p3skkim0a9prg9p40bsq0m";
+    version = "0.41.1";
+    sha256 = "0i4h458x90v2bfr0la8axg6fs0756f2paby6h34pj4vflhi78axm";
   };
 
   "gruntfuggly"."todo-tree" = vscode-utils.extensionFromVscodeMarketplace {
@@ -93,8 +93,8 @@ in
   "hashicorp"."terraform" = vscode-utils.extensionFromVscodeMarketplace {
     name = "terraform";
     publisher = "hashicorp";
-    version = "2.29.2024012316";
-    sha256 = "9dR8leUJCbAPSMWjgSDYuh9PrDCXEmy+qrOiYnQj/qo=";
+    version = "2.30.2024022914";
+    sha256 = "0raqzyvj69x6qkwbg2ypl30qag5rygisr6cw9h3hgiizj95cqhhy";
   };
 
   "ionutvmi"."path-autocomplete" = vscode-utils.extensionFromVscodeMarketplace {
@@ -114,8 +114,8 @@ in
   "redhat"."ansible" = vscode-utils.extensionFromVscodeMarketplace {
     name = "ansible";
     publisher = "redhat";
-    version = "2.10.130";
-    sha256 = "1dpr0jg0ilylzgp036vzbqklk1bvvmdc3amy56mcy9k08vpxrn0d";
+    version = "2.12.143";
+    sha256 = "1sfq4fkyxj1i0zk1rvyrlbrcfa6fchlv6f9rcslzc9h9asqpni9l";
   };
 
   "fnando"."linter" = vscode-utils.extensionFromVscodeMarketplace {
@@ -128,8 +128,8 @@ in
   "catppuccin"."catppuccin-vsc" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc";
     publisher = "catppuccin";
-    version = "3.11.0";
-    sha256 = "12bzx1pv9pxbm08dhvl8pskpz1vg2whxmasl0qk2x54swa2rhi4d";
+    version = "3.11.2";
+    sha256 = "04xcl9vbd4spdy7bl35g0720qbhx11ym65afrjs50jg7ng1y28df";
   };
 
   "mrmlnc"."vscode-json5" = vscode-utils.extensionFromVscodeMarketplace {
@@ -142,8 +142,8 @@ in
   "catppuccin"."catppuccin-vsc-icons" = vscode-utils.extensionFromVscodeMarketplace {
     name = "catppuccin-vsc-icons";
     publisher = "catppuccin";
-    version = "1.8.0";
-    sha256 = "12sw9f00vnmppmvhwbamyjcap3acjs1f67mdmyv6ka52mav58z8z";
+    version = "1.9.1";
+    sha256 = "04anq80m96ld9m8pljz1q051x6ryh49ldb10f550pwsswkfb3vhr";
   };
 
   "jnoortheen"."nix-ide" = vscode-utils.extensionFromVscodeMarketplace {
