@@ -55,6 +55,11 @@ in {
         };
       };
 
+      modules.users.todd.shell.bat = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+
       modules.users.todd.shell.fish = {
         enable = true;
       };
