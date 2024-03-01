@@ -60,6 +60,11 @@ in {
         enableFishIntegration = true;
       };
 
+      modules.users.todd.shell.btop = {
+         enable = true;
+         enableFishIntegration = true;
+       };
+
       modules.users.todd.shell.fish = {
         enable = true;
       };
