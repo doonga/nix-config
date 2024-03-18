@@ -28,7 +28,7 @@ jobs:
           extra-conf: ${{ env.nix-conf }}
       - uses: cachix/cachix-action@v14
         with:
-          name: bjw-s
+          name: greyrock
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           extraPullNames: nix-community
           installCommand: ${{ env.cachix-install }}
@@ -43,7 +43,7 @@ jobs:
           extra-conf: ${{ env.nix-conf }}
       - uses: cachix/cachix-action@v14
         with:
-          name: bjw-s
+          name: greyrock
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           extraPullNames: nix-community
           installCommand: ${{ env.cachix-install }}
@@ -156,7 +156,7 @@ jobs:
           extra-conf: ${{ env.nix-conf }}
       - uses: cachix/cachix-action@v14
         with:
-          name: bjw-s
+          name: greyrock
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           extraPullNames: nix-community
           installCommand: ${{ env.cachix-install }}
@@ -182,7 +182,7 @@ jobs:
           extra-conf: ${{ env.nix-conf }}
       - uses: cachix/cachix-action@v14
         with:
-          name: bjw-s
+          name: greyrock
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           extraPullNames: nix-community
           installCommand: ${{ env.cachix-install }}
