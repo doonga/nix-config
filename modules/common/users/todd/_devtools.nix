@@ -5,30 +5,10 @@
   myPackages,
   ...
 }:
-let
-  vscode-extensions = (import ../../editor/vscode/extensions.nix){pkgs = pkgs;};
-in
 {
   modules.users.todd.editor.vscode = {
     enable = true;
     package = pkgs-unstable.vscode;
-
-    extensions = (with vscode-extensions; [
-      eamodio.gitlens
-      golang.go
-      fnando.linter
-      # github.copilot
-      hashicorp.terraform
-      jnoortheen.nix-ide
-      luisfontes19.vscode-swissknife
-      mrmlnc.vscode-json5
-      ms-azuretools.vscode-docker
-      ms-vscode-remote.remote-containers
-      ms-vscode-remote.remote-ssh
-      redhat.ansible
-      ms-python.python
-      ms-python.vscode-pylance
-    ]);
 
     config = {
       # Editor settings

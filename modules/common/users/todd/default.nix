@@ -59,12 +59,10 @@ in {
         enable = true;
         enableFishIntegration = true;
       };
-
       modules.users.todd.shell.btop = {
-         enable = true;
-         enableFishIntegration = true;
-       };
-
+        enable = true;
+        enableFishIntegration = true;
+      };
       modules.users.todd.shell.fish = {
         enable = true;
       };
@@ -119,7 +117,7 @@ in {
       modules.users.todd.shell.tmux.enable = true;
     }
 
-    (mkIf (cfg.enableKubernetesTools) (import ./_kubernetes.nix {inherit pkgs; inherit pkgs-unstable;}))
+    (mkIf (cfg.enableKubernetesTools) (import ./_kubernetes.nix {inherit pkgs-unstable;}))
     (mkIf (cfg.enableDevTools) (import ./_devtools.nix {inherit pkgs; inherit pkgs-unstable; inherit lib; inherit myPackages;}))
   ]);
 }
