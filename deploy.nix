@@ -1,29 +1,29 @@
-{ self
-, deploy-rs
-, nixpkgs
-, ...
+{
+  self,
+  deploy-rs,
+  ...
 }:
 let
-  inherit (nixpkgs) lib;
+  deployConfig = name: system: cfg: {
+    hostname = "${name}.greyrock.io";
+    sshOpts = cfg.sshOpts or [];
 
-  genNode = hostName: nixosCfg:
-    let
-      inherit (self.hosts.${hostName}) address hostPlatform remoteBuild type;
-      inherit (deploy-rs.lib.${hostPlatform}) activate;
-    in
-    {
-      profiles.system.path = activate.${type} nixosCfg;
-      inherit remoteBuild;
-      hostname = address;
+    profiles = {
+      system = {
+        sshUser = cfg.sshUser;
+        path = deploy-rs.lib.${system}.activate.nixos self.nixosConfigurations.${name};
+        user = "root";
+      };
     };
+
+    remoteBuild = cfg.remoteBuild or false;
+    autoRollback = cfg.autoRollback or false;
+    magicRollback = cfg.magicRollback or true;
+  };
 in
 {
-  autoRollback = false;
-  magicRollback = true;
-  sshOpts = [
-    "-A"
-  ];
-  user = "root";
-  nodes = lib.mapAttrs
-    genNode (self.nixosConfigurations or { });
+  deploy.nodes = {
+    nas = deployConfig "nas" "x86_64-linux" {sshUser = "todd"; remoteBuild = true;};
+  };
+  checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
 }
