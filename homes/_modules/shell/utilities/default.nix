@@ -1,10 +1,11 @@
 {
   pkgs,
+  flake-packages,
   ...
 }:
 {
   config = {
-    home.packages = with pkgs; [
+    home.packages = with pkgs; with flake-packages.${pkgs.system}; [
       binutils
       coreutils
       curl
@@ -12,9 +13,11 @@
       envsubst
       findutils
       fish
+      gnused
       gum
       jo
       jq
+      shcopy
       tmux
       vim
       wget
