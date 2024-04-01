@@ -3,4 +3,10 @@
     "github>doonga/renovate-config",
     "github>doonga/renovate-config:automerge-github-actions",
   ],
+  "nix": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }
