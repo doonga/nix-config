@@ -12,9 +12,9 @@ jobs:
       fail-fast: false # let it build all the targets
       matrix:
         include:
-          - derivation: darwinConfigurations.bernd-macbook.system
+          - derivation: darwinConfigurations.todds-macbook.system
             os: macos-14
-          - derivation: nixosConfigurations.gladius.config.system.build.toplevel
+          - derivation: nixosConfigurations.nas.config.system.build.toplevel
             os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
@@ -30,7 +30,7 @@ jobs:
       - uses: cachix/cachix-action@v14
         if: ${{ !github.event.pull_request.head.repo.fork }}
         with:
-          name: bjw-s
+          name: doonga
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - run: |
           nix build \
