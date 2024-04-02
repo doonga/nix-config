@@ -30,7 +30,7 @@ jobs:
       - uses: cachix/cachix-action@v14
         if: ${{ !github.event.pull_request.head.repo.fork }}
         with:
-          name: doonga
+          name: greyrock
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - run: |
           nix build \
