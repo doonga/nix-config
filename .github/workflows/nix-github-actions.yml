@@ -12,9 +12,9 @@ jobs:
       fail-fast: false # let it build all the targets
       matrix:
         include:
-          - derivation: darwinConfigurations.todds-macbook.system
+          - system: todds-macbook
             os: macos-14
-          - derivation: nixosConfigurations.nas.config.system.build.toplevel
+          - system: nas
             os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
@@ -38,7 +38,7 @@ jobs:
             --builders "" \
             --max-jobs 2 \
             --eval-store auto \
-            ".#${{ matrix.derivation }}"
+            ".#ciSystems.${{ matrix.system }}"
 
   nix-build-success:
     if: ${{ always() }}
