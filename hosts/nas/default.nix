@@ -107,7 +107,7 @@ in
 
       users = {
         additionalUsers = {
-          manyie = {
+          andy = {
             isNormalUser = true;
             extraGroups = ifGroupsExist [
               "samba-users"
