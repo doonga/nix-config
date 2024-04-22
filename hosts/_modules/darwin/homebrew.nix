@@ -25,6 +25,8 @@ _:
       "shottr"
     ];
     masApps = {
+      "1Blocker - Ad Blocker" = 1365531024;
+      "1Password for Safari" = 1569813296;
       "Caffeinated" = 1362171212;
     };
   };
