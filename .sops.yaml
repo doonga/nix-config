@@ -1,7 +1,7 @@
 ---
 keys:
   - &host_nas age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
-  - &host_nixvm age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
+  - &host_utility age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
   - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
 
 creation_rules:
@@ -10,4 +10,4 @@ creation_rules:
       - age:
           - *user_todd
           - *host_nas
-          - *host_nixvm
+          - *host_utility
