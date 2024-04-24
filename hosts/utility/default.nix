@@ -17,7 +17,7 @@ in
   config = {
     networking = {
       hostName = hostname;
-      hostId = "9fe3ff83";
+      hostId = "8425e349";
       useDHCP = true;
       firewall.enable = false;
     };
