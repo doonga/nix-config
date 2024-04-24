@@ -19,6 +19,18 @@
         onepassword-credentials = {
           mode = "0444";
         };
+        "networking/bind/rndc-key" = {
+          restartUnits = [ "bind.service" ];
+          owner = config.users.users.named.name;
+        };
+        "networking/bind/externaldns-key" = {
+          restartUnits = [ "bind.service" ];
+          owner = config.users.users.named.name;
+        };
+        "networking/bind/zones/greyrock.casa" = {
+          restartUnits = [ "bind.service" ];
+          owner = config.users.users.named.name;
+        };
       };
     };
   };

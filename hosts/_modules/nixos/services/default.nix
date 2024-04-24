@@ -3,6 +3,7 @@
 }:
 {
   imports = [
+    ./bind
     ./dnsdist
     ./k3s
     ./nfs
