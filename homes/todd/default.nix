@@ -75,7 +75,7 @@
             user = "todd";
             forwardAgent = true;
           };
-          "omni.greyrock.io" = {
+          "utility.greyrock.io" = {
             port = 22;
             user = "todd";
             forwardAgent = true;

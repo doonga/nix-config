@@ -16,7 +16,7 @@ in
   config = {
     networking = {
       hostName = hostname;
-      hostId = "007f0200";
+      hostId = "9fe3ff83";
       useDHCP = true;
       firewall.enable = false;
     };
@@ -36,7 +36,6 @@ in
         ]
         ++ ifGroupsExist [
           "network"
-          "samba-users"
         ];
     };
     users.groups.todd = {
@@ -50,18 +49,7 @@ in
 
     modules = {
       services = {
-        k3s = {
-          enable = true;
-          package = pkgs.unstable.k3s_1_29;
-          extraFlags = [
-            "--tls-san=${config.networking.hostName}.greyrock.io"
-            "--tls-san=omni.k8s.greyrock.io"
-          ];
-        };
-
         openssh.enable = true;
-
-        smartd.enable = true;
       };
 
       users = {
