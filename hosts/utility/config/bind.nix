@@ -52,6 +52,7 @@ logging {
 zone "greyrock.casa." {
   type master;
   file "${config.sops.secrets."networking/bind/zones/greyrock.casa".path}";
+  journal "${config.services.bind.directory}/db.greyrock.casa.jnl";
   allow-transfer {
     key "externaldns";
   };
