@@ -20,7 +20,7 @@ jobs:
             os: macos-14
           - system: nas
             os: ubuntu-22.04
-          - system: omni
+          - system: utility
             os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
