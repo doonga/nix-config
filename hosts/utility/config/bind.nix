@@ -12,15 +12,16 @@ controls {
 # Only define known networks as trusted
 acl trusted {
   10.1.0.0/24;    # LAN
-  10.1.1.0/24;    # SERVERS
-  10.1.2.0/24;    # TRUSTED
-  10.1.3.0/24;    # WIRELESS
-  10.1.4.0/23;    # IOT
-  10.1.6.0/24;    # VIDEO
+  10.1.1.0/24;    # Servers
+  10.1.2.0/24;    # Trusted
+  10.1.3.0/24;    # Wireless
+  10.1.4.0/23;    # IoT
+  10.1.6.0/24;    # Video
   10.1.7.0/24;    # NTP
-  10.1.8.0/24;    # VOICE
-  192.168.2.0/24; # GUEST
-  10.0.11.0/24;   # WIREGUARD
+  10.1.8.0/24;    # Voice
+  192.168.2.0/24; # Guest
+  10.0.11.0/24;   # Wireguard
+  10.88.0.0/24;   # Local Podman
 };
 acl badnetworks {  };
 
