@@ -6,7 +6,7 @@
 
   upstreams.groups.default = [
     # UDM-SE
-    tcp+udp:10.1.1.1:53
+    "tcp+udp:10.1.1.1:53"
   ];
 
   # configuration of client name resolution
@@ -19,7 +19,7 @@
 
   prometheus = {
     enable = true;
-    path = /metrics;
+    path = "/metrics";
   };
 
   blocking = {
@@ -27,7 +27,7 @@
 
     loading = {
       downloads.timeout = "4m";
-      maxErrorsPerSource = "-1";
+      maxErrorsPerSource = -1;
     };
 
     blackLists = {
@@ -68,8 +68,10 @@
       other = [ # Ref: https://firebog.net
         "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser"
         # icloud private relay
-        "mask.icloud.com"
-        "mask-h2.icloud.com"
+        ''
+          mask.icloud.com
+          mask-h2.icloud.com
+        ''
       ];
       suspicious = [ # Ref: https://firebog.net
         "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
@@ -88,27 +90,39 @@
     whiteLists = {
       ads = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
       malicious = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
       native = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
       other = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
       suspicious = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
       tracking = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        "*.microsoftonline.us"
+        ''
+          *.microsoftonline.us
+        ''
       ];
     };
 
@@ -127,9 +141,9 @@
   caching = {
     minTime = "10m";
     maxTime = "30m";
-    prefetching = "true";
+    prefetching = true;
     prefetchExpires = "2h";
-    prefetchThreshold = "3";
+    prefetchThreshold = 3;
   };
 
   log = {

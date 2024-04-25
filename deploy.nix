@@ -6,7 +6,7 @@
 let
   deployConfig = name: system: cfg: {
     hostname = "${name}.greyrock.io";
-    sshOpts = cfg.sshOpts or [];
+    sshOpts = cfg.sshOpts or ["-A"];
 
     profiles = {
       system = {

@@ -51,15 +51,15 @@ in
     modules = {
       services = {
         bind = {
-           enable = true;
-           config = import ./config/bind.nix {inherit config;};
-         };
+          enable = true;
+          config = import ./config/bind.nix {inherit config;};
+        };
 
         blocky = {
-           enable = true;
-           package = pkgs.unstable.blocky;
-           config = import ./config/blocky.nix;
-         };
+          enable = true;
+          package = pkgs.unstable.blocky;
+          config = import ./config/blocky.nix;
+        };
 
         dnsdist = {
           enable = true;
