@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   ...
 }:
 {
@@ -14,6 +15,12 @@
     };
     kubernetes.enable = true;
     security.gnugpg.enable = true;
+    shell = {
+      mise = {
+        enable = true;
+        package = pkgs.unstable.mise;
+      };
+    };
     virtualisation = {
       colima = {
         enable = true;

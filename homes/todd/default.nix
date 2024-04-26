@@ -100,11 +100,6 @@
       };
 
       go-task.enable = true;
-
-      mise = {
-        enable = true;
-        package = pkgs.unstable.mise;
-      };
     };
     themes = {
       catppuccin = {

@@ -27,7 +27,7 @@ acl trusted {
 acl badnetworks {  };
 
 options {
-  listen-on port 5354 { any; };
+  listen-on port 5391 { any; };
   directory "${config.services.bind.directory}";
   pid-file "${config.services.bind.directory}/named.pid";
 
@@ -63,7 +63,7 @@ zone "greyrock.casa." {
     key "externaldns";
     key "dns1-dns2";
   };
-  also-notify { 10.1.1.12 port 5354; };
+  also-notify { 10.1.1.12 port 5391; };
   update-policy {
     grant externaldns zonesub ANY;
   };

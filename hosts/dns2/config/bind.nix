@@ -26,7 +26,7 @@ acl trusted {
 acl badnetworks {  };
 
 options {
-  listen-on port 5354 { any; };
+  listen-on port 5391 { any; };
   directory "${config.services.bind.directory}";
   pid-file "${config.services.bind.directory}/named.pid";
 
@@ -57,6 +57,6 @@ server 10.1.1.11 {
 zone "greyrock.casa." {
   type slave;
   journal "${config.services.bind.directory}/db.greyrock.casa.jnl";
-  masters { 10.1.1.11 port 5354; };
+  masters { 10.1.1.11 port 5391; };
 };
 ''
