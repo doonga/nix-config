@@ -20,7 +20,9 @@ jobs:
             os: macos-14
           - system: nas
             os: ubuntu-22.04
-          - system: utility
+          - system: dns1
+            os: ubuntu-22.04
+          - system: dns2
             os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:

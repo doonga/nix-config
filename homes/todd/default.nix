@@ -75,7 +75,12 @@
             user = "todd";
             forwardAgent = true;
           };
-          "utility.greyrock.io" = {
+          "dns1.greyrock.io" = {
+            port = 22;
+            user = "todd";
+            forwardAgent = true;
+          };
+          "dns2.greyrock.io" = {
             port = 22;
             user = "todd";
             forwardAgent = true;

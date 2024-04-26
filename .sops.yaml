@@ -1,7 +1,8 @@
 ---
 keys:
   - &host_nas age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
-  - &host_utility age1sr25smw8zytgmy50k5n753m93xx6mv783dxlp7rnfe6xdfe7tyjs4r0l2g
+  - &host_dns1 age1sr25smw8zytgmy50k5n753m93xx6mv783dxlp7rnfe6xdfe7tyjs4r0l2g
+  - &host_dns2 age1ngz93hzfh3yj0zguxkrcm4j8zdtfmwn0khhez3yn0zj78pqajyss2netxy
   - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
 
 creation_rules:
@@ -10,4 +11,5 @@ creation_rules:
       - age:
           - *user_todd
           - *host_nas
-          - *host_utility
+          - *host_dns1
+          - *host_dns2
