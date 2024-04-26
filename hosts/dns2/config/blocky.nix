@@ -1,3 +1,12 @@
+let
+  domain-whitelist = builtins.toFile "domain-whitelist" ''
+    *.microsoftonline.us
+  '';
+  icloud-relay-blocklist = builtins.toFile "icloud-relay-blocklist" ''
+    mask.icloud.com
+    mask-h2.icloud.com
+  '';
+in
 {
   ports = {
     dns = "0.0.0.0:5390";
@@ -8,6 +17,8 @@
     # UDM-SE
     "tcp+udp:10.1.1.1:53"
   ];
+
+  bootstrapDns.upstream = "10.1.1.1";
 
   # configuration of client name resolution
   clientLookup.upstream = "10.1.1.1";
@@ -67,11 +78,7 @@
       ];
       other = [ # Ref: https://firebog.net
         "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser"
-        # icloud private relay
-        ''
-          mask.icloud.com
-          mask-h2.icloud.com
-        ''
+        "file://${icloud-relay-blocklist}"
       ];
       suspicious = [ # Ref: https://firebog.net
         "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
@@ -90,39 +97,27 @@
     whiteLists = {
       ads = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
       malicious = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
       native = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
       other = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
       suspicious = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
       tracking = [
         "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt"
-        ''
-          *.microsoftonline.us
-        ''
+        "file://${domain-whitelist}"
       ];
     };
 
