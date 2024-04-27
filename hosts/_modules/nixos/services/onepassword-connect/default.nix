@@ -17,9 +17,28 @@ in
       type = lib.types.path;
       default = "/var/lib/onepassword-connect/data";
     };
+    enableReverseProxy = lib.mkEnableOption "onepassword-connect-reverseProxy";
+    onepassword-connectURL = lib.mkOption {
+      type = lib.types.nullOr lib.types.str;
+      default = null;
+    };
   };
 
   config = lib.mkIf cfg.enable {
+    modules.services.nginx = lib.mkIf cfg.enableReverseProxy {
+      enable = true;
+      virtualHosts = {
+        "${cfg.onepassword-connectURL}" = {
+          enableACME = config.modules.services.nginx.enableAcme;
+          acmeRoot = null;
+          forceSSL = config.modules.services.nginx.enableAcme;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:8080/";
+          };
+        };
+      };
+    };
+
     modules.services.podman.enable = true;
     system.activationScripts.makeOnePasswordConnectDataDir = lib.stringAfter [ "var" ] ''
       mkdir -p "${cfg.dataDir}"
@@ -30,7 +49,7 @@ in
       onepassword-connect-api = {
         image = "docker.io/1password/connect-api:1.7.2";
         autoStart = true;
-        ports = [ "8080:8080" ];
+        ports = [ "127.0.0.1:8080:8080" ];
         volumes = [
           "${cfg.credentialsFile}:/home/opuser/.op/1password-credentials.json"
           "${cfg.dataDir}:/home/opuser/.op/data"
@@ -40,7 +59,7 @@ in
       onepassword-connect-sync = {
         image = "docker.io/1password/connect-sync:1.7.2";
         autoStart = true;
-        ports = [ "8081:8080" ];
+        ports = [ "127.0.0.1:8081:8080" ];
         volumes = [
           "${cfg.credentialsFile}:/home/opuser/.op/1password-credentials.json"
           "${cfg.dataDir}:/home/opuser/.op/data"

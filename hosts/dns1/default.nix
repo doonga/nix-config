@@ -72,11 +72,18 @@ in
           config = builtins.readFile ./config/dnsdist.conf;
         };
 
+        nginx = {
+          enableAcme = true;
+          acmeCloudflareAuthFile = config.sops.secrets."networking/cloudflare/auth".path;
+        };
+
         node-exporter.enable = true;
 
         onepassword-connect = {
           enable = true;
           credentialsFile = config.sops.secrets.onepassword-credentials.path;
+          enableReverseProxy = true;
+          onepassword-connectURL = "onepassword-connect.greyrock.casa";
         };
 
         openssh.enable = true;
