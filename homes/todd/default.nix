@@ -101,6 +101,7 @@
 
       go-task.enable = true;
     };
+
     themes = {
       catppuccin = {
         enable = true;

@@ -65,10 +65,6 @@ in {
             description = "Flush DNS cache";
             body = builtins.readFile ./functions/flushdns.fish;
           };
-          mergeall = {
-            description = "Merge ALL pull requests";
-            body = builtins.readFile ./functions/mergeall.fish;
-          };
         };
       };
     })

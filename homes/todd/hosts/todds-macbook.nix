@@ -21,12 +21,5 @@
         package = pkgs.unstable.mise;
       };
     };
-    virtualisation = {
-      colima = {
-        enable = true;
-        startService = true;
-      };
-      docker-cli.enable = true;
-    };
   };
 }
