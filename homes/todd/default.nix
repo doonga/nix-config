@@ -85,6 +85,11 @@
             user = "todd";
             forwardAgent = true;
           };
+          "xo.greyrock.io" = {
+            port = 22;
+            user = "todd";
+            forwardAgent = true;
+          };
         };
       };
     };

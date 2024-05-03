@@ -18,5 +18,6 @@
     ./samba
     ./smartd
     ./smartctl-exporter
+    ./xen-orchestra
   ];
 }
