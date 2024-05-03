@@ -1,7 +1,7 @@
 ---
 keys:
   - &host_nas age1qqvew8hsq8ac9ye2e6jqn9qj7eru0flrqfm97matzwqhv3zm9f0qelky8m
-  - &host_dns1 age1sr25smw8zytgmy50k5n753m93xx6mv783dxlp7rnfe6xdfe7tyjs4r0l2g
+  - &host_dns1 age1gce5ppaxxyd09e4zygqh2zzhyfyaujlwdam3hq42uk5598k2tfhsvt5xem
   - &host_dns2 age1llmdt6mg3jesannrzqy9ye23aavc5ymtlgmc5gu8gux96am0le3s5mrnf3
   - &host_xo age1hdthwgyal22t54drkmfa8fa3kvme8j950qkn8f9sjs8rlknr03gspa9sw5
   - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
