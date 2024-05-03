@@ -1,6 +1,7 @@
 let
   domain-whitelist = builtins.toFile "domain-whitelist" ''
     *.microsoftonline.us
+    auth.split.io
   '';
   icloud-relay-blocklist = builtins.toFile "icloud-relay-blocklist" ''
     mask.icloud.com
