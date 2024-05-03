@@ -31,7 +31,17 @@
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
+  networking = {
+    useDHCP = lib.mkDefault true;
+    interfaces.eno1.useDHCP = lib.mkDefault true;
+    vlans = {
+      vlan90 = { id=90; interface="eno1"; };
+    };
+    interfaces.vlan90.ipv4.addresses = [{
+      address = "10.1.9.7";
+      prefixLength = 28;
+    }];
+  };
   # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp2s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
