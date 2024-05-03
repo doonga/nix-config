@@ -69,6 +69,11 @@ in
         node-exporter.enable = true;
 
         openssh.enable = true;
+
+        xe-guest-utilities = {
+          enable = true;
+          package = pkgs.unstable.xe-guest-utilities;
+        };
       };
 
       users = {
