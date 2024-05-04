@@ -58,6 +58,16 @@ in
       };
 
       services = {
+        chrony = {
+          enable = true;
+          servers = [
+            "time1.greyrock.io"
+            "time2.greyrock.io"
+            "time3.greyrock.io"
+            "time4.greyrock.io"
+          ];
+        };
+
         k3s = {
           enable = false;
           package = pkgs.unstable.k3s_1_29;

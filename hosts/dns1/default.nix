@@ -61,6 +61,16 @@ in
           config = import ./config/blocky.nix;
         };
 
+        chrony = {
+          enable = true;
+          servers = [
+            "time1.greyrock.io"
+            "time2.greyrock.io"
+            "time3.greyrock.io"
+            "time4.greyrock.io"
+          ];
+        };
+
         dnsdist = {
           enable = true;
           config = builtins.readFile ./config/dnsdist.conf;

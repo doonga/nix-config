@@ -50,6 +50,16 @@ in
 
     modules = {
       services = {
+        chrony = {
+          enable = true;
+          servers = [
+            "time1.greyrock.io"
+            "time2.greyrock.io"
+            "time3.greyrock.io"
+            "time4.greyrock.io"
+          ];
+        };
+
         nginx = {
           enableAcme = true;
           acmeCloudflareAuthFile = config.sops.secrets."networking/cloudflare/auth".path;
