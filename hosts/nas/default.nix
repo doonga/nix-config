@@ -15,6 +15,11 @@ in
   ];
 
   config = {
+    environment.systemPackages = [
+      pkgs.pciutils
+      pkgs.bc
+    ];
+
     networking = {
       hostName = hostname;
       hostId = "550618b6";
