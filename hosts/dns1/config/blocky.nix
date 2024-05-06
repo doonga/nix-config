@@ -4,10 +4,6 @@ let
     auth.split.io
     sdk.split.io
   '';
-  icloud-relay-blocklist = builtins.toFile "icloud-relay-blocklist" ''
-    mask.icloud.com
-    mask-h2.icloud.com
-  '';
 in
 {
   ports = {
@@ -80,7 +76,6 @@ in
       ];
       other = [ # Ref: https://firebog.net
         "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser"
-        "file://${icloud-relay-blocklist}"
       ];
       suspicious = [ # Ref: https://firebog.net
         "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt"
