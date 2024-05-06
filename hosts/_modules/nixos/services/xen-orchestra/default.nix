@@ -49,7 +49,7 @@ in
 
     virtualisation.oci-containers.containers = {
       xen-orchestra = {
-        image = "docker.io/ronivay/xen-orchestra:5.141.0";
+        image = "docker.io/ronivay/xen-orchestra:5.142.1";
         autoStart = true;
         ports = [ "127.0.0.1:8080:8080" ];
         volumes = [
