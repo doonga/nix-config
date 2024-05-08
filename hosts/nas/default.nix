@@ -137,6 +137,12 @@ in
 
         smartd.enable = true;
         smartctl-exporter.enable = true;
+
+        xen-orchestra = {
+          enable = true;
+          enableReverseProxy = true;
+          xen-orchestraURL = "xo.greyrock.casa";
+        };
       };
 
       users = {

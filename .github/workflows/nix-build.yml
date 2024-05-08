@@ -31,8 +31,6 @@ jobs:
             os: ubuntu-22.04
           - system: dns2
             os: ubuntu-22.04
-          - system: xo
-            os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
       - name: Create nix mount point

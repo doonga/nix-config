@@ -3,7 +3,6 @@ keys:
   - &host_nas age1qqvew8hsq8ac9ye2e6jqn9qj7eru0flrqfm97matzwqhv3zm9f0qelky8m
   - &host_dns1 age1g3cmgwsafqd4hkvyrxetfq2z9kegv7dlmef747te0d7wdme5vfxsuqr2q0
   - &host_dns2 age1llmdt6mg3jesannrzqy9ye23aavc5ymtlgmc5gu8gux96am0le3s5mrnf3
-  - &host_xo age1hdthwgyal22t54drkmfa8fa3kvme8j950qkn8f9sjs8rlknr03gspa9sw5
   - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
 
 creation_rules:
@@ -14,4 +13,3 @@ creation_rules:
           - *host_nas
           - *host_dns1
           - *host_dns2
-          - *host_xo
