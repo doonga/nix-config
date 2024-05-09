@@ -80,10 +80,7 @@ in
 
         openssh.enable = true;
 
-        xe-guest-utilities = {
-          enable = true;
-          package = pkgs.unstable.xe-guest-utilities;
-        };
+        qemu-guest.enable = true;
       };
 
       users = {
