@@ -20,7 +20,5 @@
     ./samba
     ./smartd
     ./smartctl-exporter
-    ./xe-guest-utilities
-    ./xen-orchestra
   ];
 }
