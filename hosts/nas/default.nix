@@ -88,6 +88,12 @@ in
           acmeCloudflareAuthFile = config.sops.secrets."networking/cloudflare/auth".path;
         };
 
+        meshcentral = {
+          enable = true;
+          enableReverseProxy = true;
+          meshcentralURL = "meshcentral.greyrock.casa";
+        };
+
         minio = {
           enable = true;
           package = pkgs.unstable.minio;

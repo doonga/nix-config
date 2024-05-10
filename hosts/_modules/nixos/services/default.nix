@@ -9,6 +9,7 @@
     ./chrony
     ./dnsdist
     ./k3s
+    ./meshcentral
     ./minio
     ./nfs
     ./node-exporter
