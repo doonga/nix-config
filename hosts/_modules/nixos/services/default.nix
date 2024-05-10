@@ -17,7 +17,6 @@
     ./onepassword-connect
     ./openssh
     ./podman
-    ./qemu-guest-services
     ./samba
     ./smartd
     ./smartctl-exporter

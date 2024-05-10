@@ -79,8 +79,6 @@ in
         node-exporter.enable = true;
 
         openssh.enable = true;
-
-        qemu-guest.enable = true;
       };
 
       users = {

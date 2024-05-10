@@ -91,8 +91,6 @@ in
         };
 
         openssh.enable = true;
-
-        qemu-guest.enable = true;
       };
 
       users = {
