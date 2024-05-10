@@ -33,7 +33,7 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   # networking.useDHCP = lib.mkDefault true;
   networking.interfaces.eno1.useDHCP = lib.mkDefault true;
-  networking.interfaces.enp1s0f0 = {
+  networking.interfaces.enp1s0f0np0 = {
     ipv4.addresses = [{
       address = "10.1.9.3";
       prefixLength = 28;

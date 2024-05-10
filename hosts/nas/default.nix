@@ -59,6 +59,7 @@ in
         enable = true;
         mountPoolsAtBoot = [
           "tank"
+          "vms"
         ];
       };
 
