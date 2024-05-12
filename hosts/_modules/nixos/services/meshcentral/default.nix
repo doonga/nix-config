@@ -10,14 +10,7 @@ in
 {
   options.modules.services.meshcentral = {
     enable = lib.mkEnableOption "meshcentral";
-    dataDir = lib.mkOption {
-      type = lib.types.path;
-      default = "/var/lib/meshcentral/data";
-    };
-    userDir = lib.mkOption {
-      type = lib.types.path;
-      default = "/var/lib/meshcentral/user";
-    };
+    package = lib.mkPackageOption pkgs "meshcentral" { };
     enableReverseProxy = lib.mkEnableOption "meshcentral-reverseProxy";
     meshcentralURL = lib.mkOption {
       type = lib.types.nullOr lib.types.str;
@@ -34,7 +27,7 @@ in
           acmeRoot = null;
           forceSSL = config.modules.services.nginx.enableAcme;
           locations."/" = {
-            proxyPass = "https://127.0.0.1:8085/";
+            proxyPass = "http://127.0.0.1:4430/";
             proxyWebsockets = true;
             extraConfig =
               "proxy_ssl_verify off;"
@@ -44,31 +37,35 @@ in
       };
     };
 
-    modules.services.podman.enable = true;
-    system.activationScripts.makeOnePasswordConnectDataDir = lib.stringAfter [ "var" ] ''
-      mkdir -p "${cfg.dataDir}"
-      chown -R 1000:1000 ${cfg.dataDir}
-      mkdir -p "${cfg.userDir}"
-      chown -R 1000:1000 ${cfg.userDir}
-    '';
+    systemd.services.meshcentral = {
+      environment = {
+        NODE_ENV = "production";
+      };
+    };
 
-    virtualisation.oci-containers.containers = {
-      meshcentral = {
-        image = "typhonragewind/meshcentral:1.1.22";
-        autoStart = true;
-        ports = [ "8085:443" ];
-        environment = {
-          HOSTNAME = "meshcentral.greyrock.casa";
-          REVERSE_PROXY = "meshcentral.greyrock.casa";
-          REVERSE_PROXY_TLS_PORT = "443";
-          IFRAME = "false";
-          ALLOW_NEW_ACCOUNTS = "true";
-          WEBRTC = "true";
+    services.meshcentral = {
+      enable = true;
+      inherit (cfg) package;
+      settings = {
+        settings = {
+          cert = "meshcentral.greyrock.casa";
+          port = 4430;
+          aliasport = 443;
+          redirport = 800;
+          agentpong = 300;
+          tlsoffload = "127.0.0.1";
+          webrtc = "true";
         };
-        volumes = [
-          "${cfg.dataDir}:/opt/meshcentral/meshcentral-data"
-          "${cfg.userDir}:/opt/meshcentral/meshcentral-files"
-        ];
+        domains = {
+          "" = {
+            certUrl = "https://meshcentral.greyrock.casa/";
+          };
+        };
+        smtp = {
+          host = "smtp.greyrock.casa";
+          port = 25;
+          from = "meshcentral@m.greyrock.io";
+        };
       };
     };
   };

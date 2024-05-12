@@ -91,6 +91,7 @@ in
         meshcentral = {
           enable = true;
           enableReverseProxy = true;
+          package = pkgs.unstable.meshcentral;
           meshcentralURL = "meshcentral.greyrock.casa";
         };
 
