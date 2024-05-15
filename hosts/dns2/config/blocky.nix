@@ -3,6 +3,7 @@ let
     *.microsoftonline.us
     auth.split.io
     sdk.split.io
+    checkout.shopify.com
   '';
 in
 {
