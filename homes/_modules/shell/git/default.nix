@@ -37,22 +37,22 @@ in {
         userEmail = cfg.email;
 
         extraConfig = lib.mkMerge [
-           {
-             core = {
-               autocrlf = "input";
-             };
-             init = {
-               defaultBranch = "main";
-             };
-             pull = {
-               rebase = true;
-             };
-             rebase = {
-               autoStash = true;
-             };
-           }
-           cfg.config
-         ];
+          {
+            core = {
+              autocrlf = "input";
+            };
+            init = {
+              defaultBranch = "main";
+            };
+            pull = {
+              rebase = true;
+            };
+            rebase = {
+              autoStash = true;
+            };
+          }
+          cfg.config
+        ];
 
         aliases = {
           co = "checkout";
