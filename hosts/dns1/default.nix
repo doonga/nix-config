@@ -71,11 +71,6 @@ in
           ];
         };
 
-        dnsdist = {
-          enable = true;
-          config = builtins.readFile ./config/dnsdist.conf;
-        };
-
         nginx = {
           enableAcme = true;
           acmeCloudflareAuthFile = config.sops.secrets."networking/cloudflare/auth".path;

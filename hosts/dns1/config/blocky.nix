@@ -8,16 +8,29 @@ let
 in
 {
   ports = {
-    dns = "0.0.0.0:5390";
+    dns = "0.0.0.0:53";
     http = 4000;
   };
+
+ bootstrapDns = [
+    {
+      upstream = "tcp-tls:1.1.1.1:853";
+    }
+  ];
 
   upstreams.groups.default = [
     # UDM-SE
     "tcp+udp:10.1.1.1:53"
   ];
 
-  bootstrapDns.upstream = "10.1.1.1";
+  conditional = {
+    mapping = {
+      "1.10.in-addr.arpa" = "10.1.1.1:53";
+      "greyrock.casa" = "127.0.0.1:5391";
+      "greyrock.io" = "10.1.1.1:53";
+      "internal" = "10.1.1.1:53";
+    };
+  };
 
   # configuration of client name resolution
   clientLookup.upstream = "10.1.1.1";
