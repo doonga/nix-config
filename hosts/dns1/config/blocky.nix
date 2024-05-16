@@ -24,6 +24,7 @@ in
   ];
 
   conditional = {
+    fallbackUpstream = false;
     mapping = {
       "1.10.in-addr.arpa" = "10.1.1.1:53";
       "greyrock.casa" = "127.0.0.1:5391";
@@ -145,6 +146,7 @@ in
   };
 
   caching = {
+    cacheTimeNegative = -1;
     minTime = "10m";
     maxTime = "30m";
     prefetching = true;
