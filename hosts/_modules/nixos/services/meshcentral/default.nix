@@ -35,6 +35,19 @@ in
           };
         };
       };
+      streamConfig = ''
+        ssl_certificate /var/lib/acme/meshcentral.greyrock.casa/fullchain.pem;
+        ssl_certificate_key /var/lib/acme/meshcentral.greyrock.casa/key.pem;
+        ssl_session_cache shared:MPSSSL:10m;
+        ssl_ciphers HIGH:!aNULL:!MD5;
+        ssl_prefer_server_ciphers on;
+
+        server {
+          listen 4433 ssl;
+          proxy_pass 127.0.0.1:44330;
+          proxy_next_upstream on;
+        }
+      '';
     };
 
     systemd.services.meshcentral = {
@@ -54,6 +67,9 @@ in
           redirport = 800;
           agentpong = 300;
           tlsoffload = "127.0.0.1";
+          mpsport = "44330";
+          mpsaliasport = "4433";
+          mpstlsoffload = "true";
           webrtc = "true";
         };
         domains = {
