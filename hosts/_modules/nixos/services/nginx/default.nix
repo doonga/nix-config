@@ -18,11 +18,6 @@ in
       type = lib.types.attrs;
       default = {};
     };
-    streamConfig = lib.mkOption {
-      type = lib.types.lines;
-      default = {};
-    };
-
     acmeCloudflareAuthFile = lib.mkOption {
       type = lib.types.nullOr lib.types.path;
       default = null;
@@ -40,7 +35,6 @@ in
           root = "/var/www/placeholder";
         };
       };
-      streamConfig = cfg.streamConfig;
     };
 
     security.acme = lib.mkIf cfg.enableAcme  {
