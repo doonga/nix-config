@@ -33,6 +33,12 @@ in
     };
   };
 
+  customDNS = {
+    mapping = {
+      "main.k8s.greyrock.io" = "10.1.1.20";
+    };
+  };
+
   # configuration of client name resolution
   clientLookup.upstream = "10.1.1.1";
 
