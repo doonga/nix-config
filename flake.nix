@@ -103,7 +103,7 @@
 
     nixosConfigurations = {
       nas = mkSystemLib.mkNixosSystem "x86_64-linux" "nas" overlays flake-packages;
-      dns1 = mkSystemLib.mkNixosSystem "x86_64-linux" "dns1" overlays flake-packages;
+      dns = mkSystemLib.mkNixosSystem "x86_64-linux" "dns" overlays flake-packages;
     };
 
     darwinConfigurations = {
