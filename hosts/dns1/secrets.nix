@@ -25,10 +25,6 @@
           restartUnits = [ "bind.service" ];
           owner = config.users.users.named.name;
         };
-        "networking/bind/dns1-dns2-key" = {
-          restartUnits = [ "bind.service" ];
-          owner = config.users.users.named.name;
-        };
         "networking/cloudflare/auth" = {
           owner = config.users.users.acme.name;
         };

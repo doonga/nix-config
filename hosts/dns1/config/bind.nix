@@ -5,7 +5,6 @@
 ''
 include "${config.sops.secrets."networking/bind/rndc-key".path}";
 include "${config.sops.secrets."networking/bind/externaldns-key".path}";
-include "${config.sops.secrets."networking/bind/dns1-dns2-key".path}";
 controls {
   inet 127.0.0.1 allow {localhost;} keys {"rndc-key";};
 };
@@ -51,19 +50,13 @@ logging {
   category default  { stdout; };
 };
 
-server 10.1.1.12 {
-  keys { dns1-dns2; };
-};
-
 zone "greyrock.casa." {
   type master;
   file "${config.sops.secrets."networking/bind/zones/greyrock.casa".path}";
   journal "${config.services.bind.directory}/db.greyrock.casa.jnl";
   allow-transfer {
     key "externaldns";
-    key "dns1-dns2";
   };
-  also-notify { 10.1.1.12 port 5391; };
   update-policy {
     grant externaldns zonesub ANY;
   };

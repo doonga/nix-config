@@ -158,12 +158,4 @@ in
     level = "info";
     format = "text";
   };
-
-  redis = {
-    address = "10.1.1.158:6379";
-    database = 10;
-    required = false;
-    connectionAttempts = 10;
-    connectionCooldown = "3s";
-  };
 }
