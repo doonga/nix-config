@@ -23,5 +23,25 @@
       # Must match what is in /etc/shells
       sudo chsh -s /run/current-system/sw/bin/fish todd
     '';
+
+    homebrew = {
+      taps = [
+      ];
+      brews = [
+      ];
+      casks = [
+        "discord"
+        "google-chrome"
+        "obsidian"
+        "orbstack"
+        "plex"
+        "tableplus"
+        "transmit"
+      ];
+      masApps = {
+        "Keka" = 470158793;
+        "Passepartout" = 1433648537;
+      };
+    };
   };
 }
