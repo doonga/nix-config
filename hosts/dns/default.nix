@@ -55,12 +55,6 @@ in
           config = import ./config/bind.nix {inherit config;};
         };
 
-        blocky = {
-          enable = true;
-          package = pkgs.unstable.blocky;
-          config = import ./config/blocky.nix;
-        };
-
         chrony = {
           enable = true;
           servers = [
