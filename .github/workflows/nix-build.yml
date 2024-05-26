@@ -27,8 +27,6 @@ jobs:
             os: macos-14
           - system: nas
             os: ubuntu-22.04
-          - system: utility
-            os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
       - name: Create nix mount point

@@ -108,6 +108,13 @@ in
 
         node-exporter.enable = true;
 
+        onepassword-connect = {
+          enable = true;
+          credentialsFile = config.sops.secrets.onepassword-credentials.path;
+          enableReverseProxy = true;
+          onepassword-connectURL = "onepassword-connect.greyrock.casa";
+        };
+
         openssh.enable = true;
 
         samba = {
