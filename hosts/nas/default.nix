@@ -34,6 +34,7 @@ in
       group = "todd";
       shell = pkgs.fish;
       openssh.authorizedKeys.keys = lib.strings.splitString "\n" (builtins.readFile ../../homes/todd/config/ssh/ssh.pub);
+      hashedPasswordFile = config.sops.secrets."users/todd/password".path;
       isNormalUser = true;
       extraGroups =
         [
