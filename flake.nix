@@ -76,7 +76,7 @@
     supportedSystems = ["x86_64-linux" "aarch64-darwin"];
     forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
     overlays = import ./overlays {inherit inputs;};
-    mkSystemLib = import ./lib/mkSystem.nix {inherit inputs;};
+    mkSystemLib = import ./lib/mkSystem.nix {inherit inputs overlays;};
     flake-packages = self.packages;
 
     legacyPackages = forAllSystems (
@@ -102,11 +102,11 @@
     );
 
     nixosConfigurations = {
-      nas = mkSystemLib.mkNixosSystem "x86_64-linux" "nas" overlays flake-packages;
+      nas = mkSystemLib.mkNixosSystem "x86_64-linux" "nas" flake-packages;
     };
 
     darwinConfigurations = {
-      todds-macbook = mkSystemLib.mkDarwinSystem "aarch64-darwin" "todds-macbook" overlays flake-packages;
+      todds-macbook = mkSystemLib.mkDarwinSystem "aarch64-darwin" "todds-macbook" flake-packages;
     };
 
     # Convenience output that aggregates the outputs for home, nixos.
