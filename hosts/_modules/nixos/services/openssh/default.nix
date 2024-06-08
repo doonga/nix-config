@@ -29,13 +29,11 @@ in
     };
 
     # Passwordless sudo when SSH'ing with keys
-    security.pam.enableSSHAgentAuth = true;
-    # TODO: Enable this when option becomes available
-    # security.pam.sshAgentAuth = {
-    #   enable = true;
-    #   authorizedKeysFiles = [
-    #     "/etc/ssh/authorized_keys.d/%u"
-    #   ];
-    # };
+    security.pam.sshAgentAuth = {
+      enable = true;
+      authorizedKeysFiles = [
+        "/etc/ssh/authorized_keys.d/%u"
+      ];
+    };
   };
 }
