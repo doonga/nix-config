@@ -1,6 +1,7 @@
 ---
 keys:
   - &host_nas age15sdt0rda37qq3kxms29g5jcasqtcsz79ew99v4dvmes6jfjkvg8sgva5un
+  - &host_utility age1nx96c3dsyslg4uzgf6wz5w4nn0q7kszzk6wz7an0jw90lz4xyyxqc0nmmz
   - &user_todd age136uhfkdjvxacd40d9r7guay8a7tqdz9y0264xvxvhvswxwh229lqlwan93
 
 creation_rules:
@@ -9,3 +10,4 @@ creation_rules:
       - age:
           - *user_todd
           - *host_nas
+          - *host_utility

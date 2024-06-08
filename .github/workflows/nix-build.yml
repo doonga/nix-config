@@ -27,6 +27,8 @@ jobs:
             os: macos-14
           - system: nas
             os: ubuntu-latest
+          - system: utility
+            os: ubuntu-22.04
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
