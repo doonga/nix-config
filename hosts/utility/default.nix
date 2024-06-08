@@ -61,6 +61,13 @@ in
           ];
         };
 
+        meshcentral = {
+          enable = true;
+          enableReverseProxy = true;
+          package = pkgs.unstable.meshcentral;
+          meshcentralURL = "meshcentral.greyrock.casa";
+        };
+
         nginx = {
           enableAcme = true;
           acmeCloudflareAuthFile = config.sops.secrets."networking/cloudflare/auth".path;
