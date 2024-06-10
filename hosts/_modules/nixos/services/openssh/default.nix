@@ -14,9 +14,8 @@ in
   config = lib.mkIf cfg.enable {
     services.openssh = {
       enable = true;
-      # TODO: Enable this when option becomes available
       # Don't allow home-directory authorized_keys
-      # authorizedKeysFiles = lib.mkForce ["/etc/ssh/authorized_keys.d/%u"];
+      authorizedKeysFiles = lib.mkForce ["/etc/ssh/authorized_keys.d/%u"];
       settings = {
         # Harden
         PasswordAuthentication = false;
