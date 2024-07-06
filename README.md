@@ -1,3 +1,5 @@
+As of 7/6/24, I've decided to move to a simpler setup. This repo is no longer in service.
+
 # nix-config
 
 [![built with nix](https://img.shields.io/badge/built_with_nix-blue?style=for-the-badge&logo=nixos&logoColor=white)](https://builtwithnix.org)
